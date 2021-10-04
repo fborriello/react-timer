@@ -1,6 +1,17 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Sample timer taken from: https://github.com/mobxjs/mobx#a-quick-example
+
+## How it works
+The `observer` wrapper around the `TimerView` React component, will automatically detect that rendering
+depends on the `timer.secondsPassed` observable, even though this relationship is not explicitly defined. The reactivity system will take care of re-rendering the component when _precisely that_ field is updated in the future.
+
+Every event (`onClick` / `setInterval`) invokes an _action_ (`myTimer.increase` / `myTimer.reset`) that updates _observable state_ (`myTimer.secondsPassed`).
+Changes in the observable state are propagated precisely to all _computations_ and _side effects_ (`TimerView`) that depend on the changes being made.
+
+![Alt text](docs/mobxFlow.png?raw=true "Mobx flow")
+
+This conceptual picture can be applied to the above example, or any other application using MobX.
 
 ## Available Scripts
 
