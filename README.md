@@ -1,6 +1,9 @@
-# Getting Started with Create React App
+a# Getting Started with Create React App
 
 Sample timer taken from: https://github.com/mobxjs/mobx#a-quick-example
+
+## Required node version
+`16.10.0`
 
 ## How it works
 The `observer` wrapper around the `TimerView` React component, will automatically detect that rendering
